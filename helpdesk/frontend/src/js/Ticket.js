@@ -11,12 +11,22 @@ export default class Ticket {
   }
 
   allTickets() {
-    
+    createRequest({
+      url: localhost + '/?method=allTickets',
+      method: 'GET',
+      callback: data => data.map(ticket => console.log(ticket)),
+    })
+  }
+
+  ticketById() {
+    createRequest({
+      url: localhost + '/?method=allTickets',
+      method: 'GET',
+      callback: data => data.map(ticket => console.log(ticket.id))
+    })
+  }
+  //Что отправлять в POST запросе?
+  createTicket() {
+   
   }
 }
-
-createRequest({
-  url: localhost + '/?method=allTickets',
-  method: 'GET',
-})
-.then(data => data.map(ticket => console.log(ticket)))

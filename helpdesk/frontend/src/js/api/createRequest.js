@@ -2,28 +2,13 @@ const createRequest = async (options = {}) => {
 	
 	return fetch(options.url, {
 		method: options.method,
-		calback: options.calback,
+		body: options.method === 'GET' ? null : formData,
 	})
-	.then(response => {
-		if (response.ok) {
-			return response.json()
-		} else {
-			const e = new Error('Что то пошло не так');
-			throw e
-		}
-		// return response.json()
-		// .then(err => {
-		// 	const e = new Error('Что то пошло не так');
-		// 	e.data = err;
-		// 	throw e
-		// })
+	.then(response => response.json())
+	.then(result => options.callback(result))
+	.catch(e => {
+		console.error('Что то пошло не по плану', e)
 	})
-
-	//  const response = await fetch(localhost)
-	// 	.then(JSON.stringify(response))
-	// 	.then(data => JSON.stringify(data.body))
-	// 	.then(body => console.log(body))
-	// console.log(response.body)
 };
 
 export default createRequest;
