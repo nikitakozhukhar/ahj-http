@@ -14,7 +14,7 @@ export default class TicketView {
       <div class="ticket-description">${description}</div>
       <div class="control-button">
         <div class="ticket-created">${created}</div>
-        <div class="ticket-change">4</div>
+        <img src="./img/pncl.svg" class='ticket-change' alt="карандаш">
         <div class="ticket-delete">5</div>
       </div>
     `

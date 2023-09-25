@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+.add-new-ticket {
+	
+	margin-bottom: 10px; /*Убрать после окончания*/
+}
+.new-ticket-container {
+	
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 35%;
+	width: 35vw;
+	padding: 10px 30px 10px 20px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	background-color: aliceblue;
+}
+textarea {
+	resize: none;
+}
+.new-ticket-header {
+	margin: 0 auto 10px auto;
+}
+.new-ticket-short-descr {
+	margin-bottom: 10px;
+}
+.new-ticket-descr {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.form-btn-container {
+	display: flex;
+	justify-content: end;
+	
+	margin-top: 10px;
+}
+.cancel {
+	padding: 10px 20px;
+	margin-right: 30px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.ok {
+	padding: 10px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}

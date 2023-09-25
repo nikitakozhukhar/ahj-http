@@ -1,20 +1,18 @@
 import HelpDesk from './HelpDesk';
-import TicketView from './TicketView';
-import Ticket from './Ticket';
+// import TicketView from './TicketView';
+// import Ticket from './Ticket';
+import TicketForm from './TicketForm';
 
 const root = document.getElementById('root');
-const add = document.querySelector('.add-ticket-btn');
+const addTicket = document.querySelector('.add-ticket-btn');
 
-// const ticket = new Ticket(1);
+const ticketForm = new TicketForm();
 
 const app = new HelpDesk(root);
 
 
 app.init();
-
-add.addEventListener('click', e => {
-
-  
-  
+addTicket.addEventListener('click', e => {
+	ticketForm.newTicketMarkUp()
 })
 
