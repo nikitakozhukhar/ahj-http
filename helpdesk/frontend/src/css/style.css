@@ -4,6 +4,7 @@
 }
  
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -22,15 +23,16 @@
 }
 .ticket-container {
   display: flex;
-  flex-direction: column;
 }
+
 .ticket {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   padding: 5px 10px;
   margin-bottom: 10px;
   border: 1px solid red;
 }
+
 .ticket-status {
   width: 20px;
   height: 20px;
@@ -40,9 +42,12 @@
   text-align: center;
   cursor: pointer;
 }
-.ticket-description {
+
+.ticket-name {
+  margin-left: 10px;
   margin-right: 36vw;
 }
+
 .ticket-created {
   margin-right: 4vw;
 }
@@ -50,6 +55,16 @@
 .control-button {
   display: flex;
 }
+
+.ticket-description {
+  display: none;
+}
+.show {
+  display: block
+}
+
+
+
 .ticket-change {
   position: relative;
   width: 20px;
@@ -74,5 +89,35 @@
   border: 1px solid black;
   border-radius: 50%;
   text-align: center;
+  cursor: pointer;
+}
+
+.form-popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 30%;
+  padding: 10px;
+  background-color: #fff;
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn {
+  display: inline;
+  width: 100px;
+  margin: 10px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
   cursor: pointer;
 }

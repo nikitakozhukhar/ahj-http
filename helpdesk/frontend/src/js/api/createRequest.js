@@ -1,8 +1,11 @@
 const createRequest = async (options = {}) => {
-	
+	const headers = {
+		'Content-Type': 'application/json',
+	}
 	return fetch(options.url, {
 		method: options.method,
-		body: options.method === 'GET' ? null : formData,
+		body: options.method === 'GET' ? null : JSON.stringify(options.data),
+		
 	})
 	.then(response => response.json())
 	.then(result => options.callback(result))

@@ -1,15 +1,41 @@
+import createRequest from "./api/createRequest";
+
 /**
  *  Класс для связи с сервером.
  *  Содержит методы для отправки запросов на сервер и получения ответов
  * */
 export default class TicketService {
-  list(callback) {}
+ constructor() {
+  this.url = 'http://localhost:3000/';
+ }
 
-  get(id, callback) {}
+  static list(callback) {
+    createRequest({
+      url: 'http://localhost:3000/?method=allTickets',
+      method: 'GET',
+      callback
+    })
+  }
 
-  create(data, callback) {}
+  static get(id, callback) {
+    createRequest({
+      url: 'http://localhost:3000/?method=ticketById&id=<id>',
+      id,
+      method: 'GET',
+      callback
+    })
+  }
 
-  update(id, data, callback) {}
+  static create(data, callback) {
+    createRequest({
+      url: 'http://localhost:3000/?method=createTicket',
+      data: data,
+      method: 'POST',
+      callback
+    })
+  }
 
-  delete(id, callback) {}
+   update(id, data, callback) {}
+
+   delete(id, callback) {}
 }

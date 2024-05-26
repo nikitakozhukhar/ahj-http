@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HelpDesk</title>
-</head>
-<body>
-
-   <div class="container">
-    <div class="btn-container">
-      <button class="add-ticket-btn">Добавить тикет</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HelpDesk</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="btn-container">
+          <button class="add-ticket-btn">Добавить тикет</button>
+        </div>
+        <form class="ticket-form">
+          <div id="contactForm" class="form-popup hide">
+            <h2 class="form-title">Добавить тикет</h2>
+  
+            <label for="ticket_name">Краткое описание</label>
+            <input type="text" name="ticket_name" class="ticket_name" />
+  
+            <label for="ticket_description">Подробное описание</label>
+            <textarea
+              type="text"
+              name="ticket_description"
+              class="ticket_description"
+            ></textarea>
+  
+            <div class="btn-container">
+              <button type="button" class="btn cancel" id="closeFormBtn">
+                Отмена
+              </button>
+              <button type="submit" class="btn sendBtn">ОК</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-   
 
-
-	<div id="root"></div>
-
-
-<!-- <a href="https://www.flaticon.com/ru/free-icons/" title="карандаш иконки">Карандаш иконки от Freepik - Flaticon</a> -->
-</body>
+    <!-- <a href="https://www.flaticon.com/ru/free-icons/" title="карандаш иконки">Карандаш иконки от Freepik - Flaticon</a> -->
+  </body>
 </html>
