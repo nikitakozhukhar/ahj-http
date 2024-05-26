@@ -2,9 +2,9 @@ import TicketService from "./TicketService";
 
 export default class TicketUpdate {
   constructor(id, data, callback) {
-    this.id = id;
-    this.data = data;
-    this.callback = callback;
+    // this.id = id;
+    // this.data = data;
+    // this.callback = callback;
     this.getTickets = this.getTickets.bind(this);
     this.upD();
   }
@@ -14,15 +14,18 @@ export default class TicketUpdate {
   }
 
   upD() {
-    const updateTickets = document.querySelector('.ticket-change');
-
-    updateTickets.addEventListener('click', e => {
-      console.log('e')
-    })
+    // const updateTickets = document.querySelectorAll('.ticket-change');
 
     // updateTickets.forEach(ticket => {
-    //   ticket.addEventListener('click', e => console.log('click'))
+    //   ticket.addEventListener('click', e => {
+    //     console.log(e)
+    //   })
     // })
+
+    const updateTicket = document.querySelector('.ticket-change');
+
+    updateTicket.addEventListener('click', e => console.log('click'))
+    
   }
 
   clgTicket() {

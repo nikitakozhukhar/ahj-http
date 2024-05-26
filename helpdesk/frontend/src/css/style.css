@@ -26,30 +26,42 @@
 }
 
 .ticket {
-  /* display: flex; */
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
   padding: 5px 10px;
   margin-bottom: 10px;
   border: 1px solid red;
 }
 
+.ticket-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .ticket-status {
   width: 20px;
   height: 20px;
-  /* margin-right: 5px; */
+  margin-right: 5px;
   border: 1px solid black;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
 }
 
+.ticket-name_created {
+  display: flex;
+  
+  justify-content: space-around;
+}
+
 .ticket-name {
-  margin-left: 10px;
-  margin-right: 36vw;
+  /* margin-left: 10px;
+  margin-right: 36vw; */
 }
 
 .ticket-created {
-  margin-right: 4vw;
+  /* margin-right: 4vw; */
 }
 
 .control-button {
@@ -63,13 +75,11 @@
   display: block
 }
 
-
-
 .ticket-change {
   position: relative;
-  width: 20px;
-  height: 20px;
-  /* margin-right: 5px; */
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
   border: 1px solid black;
   border-radius: 50%;
   text-align: center;
@@ -83,8 +93,8 @@
 } */
 
 .ticket-delete {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 5px;
   border: 1px solid black;
   border-radius: 50%;

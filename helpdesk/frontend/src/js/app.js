@@ -10,13 +10,13 @@ const root = document.getElementById('root');
 // const ticket = new Ticket(1);
 
 const app = new HelpDesk(root);
-const form = new TicketForm();
-// const updateTicket = new TicketUpdate(1);
-
-
 
 app.init();
 
+const form = new TicketForm();
+
+
+const updateTicket = new TicketUpdate();
 // add.addEventListener('click', e => {
   
 //   form.formMarkUp();

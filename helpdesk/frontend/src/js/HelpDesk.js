@@ -20,5 +20,9 @@ export default class HelpDesk {
     TicketService.list(this.ticketView.createTickets)
   }
 
+  getDescription() {
+    
+  }
+
 }
 
