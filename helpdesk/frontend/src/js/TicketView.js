@@ -41,7 +41,7 @@ export default class TicketView {
   }
 
   static getDescription(data) {
-   console.log(data)
+   console.log
   }
  
 }
